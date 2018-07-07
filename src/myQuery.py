@@ -10,17 +10,14 @@ regex1 = re.compile('Care|Quality|Commission')  # 0,1,2,3,4,5,6 PASSED
 
 def my_query(regex):
     output = []
-    base_dir = os.getcwd()  # '/Users/mincheung/PycharmProjects/nhs'
+    base_dir = os.getcwd()
     print(base_dir)
     filename = 'hscic-news'
 
     with open(os.path.join(base_dir, filename), 'r') as inputFile:
-        # with open('OutputLineNumbers', 'w') as outputLineNumbers:
         for line_i, line in enumerate(inputFile, 0):
             if regex.search(line):
-                # outputLineNumbers.write("%d\n" % line_i)
                 output.append(line_i)
-                # print("{0}".format(line_i))
         return output
 
 

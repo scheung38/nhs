@@ -44,6 +44,7 @@ Acceptance criteria
 
 The acceptance criteria are shown below.
 
+
 Query                              Type of search   Expected outcome: document
 ------------------------------------------------------------------------------
 Care Quality Commission            OR               0,1,2,3,4,5,6
