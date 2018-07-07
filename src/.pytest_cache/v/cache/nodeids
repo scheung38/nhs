@@ -1,0 +1,5 @@
+[
+  "myQuery_test.py::test_my_query1",
+  "myQuery_test.py::test_my_query2",
+  "myQuery_test.py::test_my_add"
+]
