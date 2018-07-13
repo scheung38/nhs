@@ -1,8 +1,8 @@
 [
-  "myQuery_test.py::test_my_query1",
-  "myQuery_test.py::test_my_query2",
-  "myQuery_test.py::test_my_query3",
-  "myQuery_test.py::test_my_query4",
-  "myQuery_test.py::test_my_query5",
-  "myQuery_test.py::test_my_add"
+  "part1_acceptance_criteria_test.py::test_my_query1", 
+  "part1_acceptance_criteria_test.py::test_my_query2", 
+  "part1_acceptance_criteria_test.py::test_my_query3", 
+  "part1_acceptance_criteria_test.py::test_my_query4", 
+  "part1_acceptance_criteria_test.py::test_my_query5", 
+  "part1_acceptance_criteria_test.py::test_my_add"
 ]
