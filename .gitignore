@@ -107,3 +107,6 @@ venv.bak/
 
 /.idea
 /.notes
+/src/.pytest_cache/
+/.pytest_cache/
+/test/.pytest_cache/
