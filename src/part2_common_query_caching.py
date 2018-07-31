@@ -3,6 +3,23 @@ from riak import RiakClient, RiakBucket, RiakObject, RiakKeyFilter, RiakNode
 import re
 from src.part1_news_search import my_query, get_directory
 
+import pandas as pd
+
+
+df = pd.read_table('../hscicNews',
+                       sep='/n',
+                   skiprows=0,
+                   skipfooter=0,
+                   )
+
+
+print("df is: {0}".format(df))
+print("test")
+print("df is: {0}".format(df.to_dict()))
+
+
+
+
 
 # client = RiakClient(pb_port=8087, protocol='pbc')
 
@@ -24,11 +41,16 @@ for x, i in enumerate(custom_search, 0):
     regex = re.compile(i)
     val.append(my_query(regex, get_directory()))
 
-keys = bucket.new('RESULT', data=val)
+keys = bucket.new('RESULT', data=df.to_dict())
+
+# Secondary Indexes
 keys.add_index("bmonth_bin", 'April')
-keys.add_index("byear_int", 2018)
+keys.add_index("byear_int", 2013)
 
 keys.store()
+
+janes_orders = bucket.get_index("bmonth_bin", 'April')
+print(janes_orders.results)
 
 
 print("this is val stored: ", val)

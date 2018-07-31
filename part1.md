@@ -84,8 +84,12 @@ Replication
 
 ## Installation
 
-$ pip install -r requirements.txt
+$ brew install pipenv
 
+
+$ pipenv install
+
+$ pipenv install riak
 
 ## API Reference
 

@@ -21,6 +21,7 @@ $ riak restart -> ok
 
 $ riak version -> 2.2.3
 
+http://localhost:8098/buckets/hscicNews/keys/RESULT
 
 Riak UI Panel is available on
 
